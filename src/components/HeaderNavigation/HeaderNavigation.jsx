@@ -1,25 +1,35 @@
-import styles from './HeaderNavigation.module.scss';
-import { Link } from 'react-router-dom'
+import styles from "./HeaderNavigation.module.scss";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "./../../context/UserProvider";
+import "./HeaderNavigation.scss";
 
-const HeaderNavigation = () => (
-    <ul className={styles.HeaderNavigation}>
-      <li>
-        <Link to="/accueil">
-          <img src="vite.svg" />
-        </Link>
-      </li>
-      <div className={styles.HeaderNavigation_links}>
-        <li className={styles.HeaderxNavigation_links}>
-          <Link to="/presentation">presentation</Link>
-        </li>
-        <li className={styles.HeaderNavigation_links}>
-          <Link to="/carte">carte</Link>
-        </li>
-        <li className={styles.HeaderNavigation_links}>
-          <Link to="/localisation">localisation</Link>
-        </li>
-      </div>
-    </ul>
-);
+const HeaderNavigation = () => {
+	const { currentUser } = useContext(UserContext);
+	const location = useLocation();
+
+	return (
+		<header className={styles.HeaderNavigation}>
+			<div>
+				<Link to="/accueil">
+					<img src="../../../public/vite.svg" />
+				</Link>
+			</div>
+			<nav className={styles.HeaderNavigation_links}>
+				<NavLink to="/presentation">Presentation</NavLink>
+				<NavLink to="/carte">Carte</NavLink>
+				<NavLink to="/localisation">Localisation</NavLink>
+				{currentUser && (
+					<>
+						<NavLink to="/private/liste-des-plats">
+							Listes des plats
+						</NavLink>
+						<NavLink to="/private/ajouter-un-plat">Ajouter un plat</NavLink>
+					</>
+				)}
+			</nav>
+		</header>
+	);
+};
 
 export default HeaderNavigation;

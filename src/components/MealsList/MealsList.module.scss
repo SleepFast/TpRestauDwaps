@@ -1,0 +1,29 @@
+.MealsList table {
+  width: 100%;
+}
+
+.MealsListCTA {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    border: 1px solid purple;
+    color: purple;
+    border-radius: 20px;
+    padding: 15px;
+
+    &:hover {
+      color: white;
+      background-color: purple;
+      border-color: purple;
+    }
+
+    &.Selected {
+      color: white;
+      background-color: purple;
+      border-color: purple;
+    }
+  }
+}

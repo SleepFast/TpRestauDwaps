@@ -1,43 +1,50 @@
 .HeaderNavigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+
+  & > *:not(:first-child){
+    flex-basis: 100%;
+  }
 }
 
 .HeaderNavigation a {
-  display: block;
-  width: 100%;
-  padding: 15px;
+	padding: 15px;
+	width: 100%;
 }
 
-.HeaderNavigation a:first-child {
-  display: block;
+.HeaderNavigation div a:first-child {
+	display: block;
 
-  img {
-    display: block;
-    object-fit: cover;
-  }
+	img {
+		display: block;
+		object-fit: cover;
+	}
 }
 
 .HeaderNavigation_links {
-  display: flex;
+	display: flex;
   column-gap: 15px;
 
-  & li {
-    min-width: calc((100%/3) + 10px);
+	a {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		border: 1px solid blue;
+		border-radius: 20px;
+		font-weight: bolder;
+		color: blue;
 
-    & a {
-        border: 1px solid blue;
-        border-radius: 20px;
-        font-weight: bolder;
-        color: blue;
-      
-        &:hover {
-          background-color: blue;
-          color: white;
-        }
-    }
-  }
+		&:hover {
+			background-color: blue;
+			color: white;
+		}
+	}
+}
+
+.active {
+	background-color: blue;
+	color: white;
 }

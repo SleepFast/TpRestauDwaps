@@ -119,6 +119,10 @@ button {
   cursor: pointer;
 }
 
+button:focus {
+  outline: 0;
+}
+
 details > summary {
   cursor: pointer;
   user-select: none;
