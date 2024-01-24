@@ -12,6 +12,10 @@ import Footer from "./components/Footer/Footer";
 import PrivateModify from "./pages/Private/PrivateModify/PrivateModify";
 import { Navigate } from 'react-router-dom'
 import PrivateAdd from "./pages/Private/PrivateAdd/PrivateAdd";
+import MealBubbleOrder from './components/MealBubbleOrder/MealBubbleOrder'
+import Commande from './pages/Commande/Commande'
+import OrderConfirm from './pages/OrderConfirm/OrderConfirm'
+import SiteMap from './pages/SiteMap/SiteMap'
 
 function App() {
 
@@ -32,6 +36,18 @@ function App() {
 							path="/localisation"
 							element={<Localisation />}
 						/>
+						<Route
+							path="/commande"
+							element={<Commande />}
+						/>
+						<Route
+							path="/confirmation"
+							element={<OrderConfirm />}
+						/>
+						<Route
+							path="/siteMap"
+							element={<SiteMap />}
+						/>
 						<Route path="/private" element={<Private />}>
 							<Route
 								path="/private/liste-des-plats"
@@ -49,6 +65,7 @@ function App() {
 						<Route path="/" element={<Navigate to="/accueil"/>} />
 						<Route path="*" element={<div>PAGE NOT FOUND</div>} />
 					</Routes>
+					<MealBubbleOrder></MealBubbleOrder>
 				</div>
 				<Footer></Footer>
 			</Router>

@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Localisation.module.scss';
+import LeafletMap from '../../components/LeafletMap/LeafletMap';
 
 const Localisation = () => (
   <div className={styles.Localisation}>
-    Localisation Component
+    <h2>NOUS RETROUVER</h2>
+    <LeafletMap></LeafletMap>
   </div>
 );
-
-Localisation.propTypes = {};
-
-Localisation.defaultProps = {};
 
 export default Localisation;

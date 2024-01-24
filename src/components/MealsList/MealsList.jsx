@@ -8,6 +8,7 @@ const MealsList = () => {
 
 	return (
 		<div className={styles.MealsList}>
+			<h2>LISTE DES PLATS</h2>
 			<div className={styles.MealsListCTA}>
 				<button
 					className={selected == "asc" ? styles.Selected : ""}
@@ -27,10 +28,10 @@ const MealsList = () => {
 				</button>
 			</div>
 
-			<table>
+			<table className={styles.MealsListTable}>
 				<thead>
 					<tr>
-						<th>Nom du plat</th>
+						<th width="50%">Nom du plat</th>
 						<th>Pays d'origine de la spécialité</th>
 						<th>Catégorie</th>
 					</tr>

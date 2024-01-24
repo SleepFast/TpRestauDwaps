@@ -1,0 +1,9 @@
+.LeafletMap {
+  position: sticky;
+  min-height: calc(100vh - 160px - 2rem);
+}
+
+.LeafletMapPopup {
+  text-align: center;
+  font-size: 16px;
+}

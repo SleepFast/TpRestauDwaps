@@ -10,12 +10,14 @@ export default function MealListProvider({ children }) {
 	const [meals, setMeals] = useState([]);
 	const [memoMeals, setMemoMeals] = useState([]);
 	const [selected, setSelectedState] = useState();
+	const [changed, setChangedState] = useState(false);
 
 	function updateMeal(editedMeal) {
 		let newMealList = meals.filter((meal) => meal.id !== editedMeal.id);
 		newMealList.push(editedMeal);
 		setMeals(newMealList);
 		setMemoMeals(meals);
+		setChangedState(!changed)
 	}
 
 	useEffect(() => {
@@ -29,7 +31,7 @@ export default function MealListProvider({ children }) {
 		} else if (selected == "desc") {
 			filterMeals(false);
 		}
-	}, [meals]);
+	}, [changed]);
 
 	function filterMeals(isAsc) {
 		let MealsOrdered;
@@ -58,6 +60,7 @@ export default function MealListProvider({ children }) {
   function addMeal(currentMeal) {
     setMeals([...meals, currentMeal])
     setMemoMeals(meals)
+		setChangedState(!changed)
   }
 
 	return (

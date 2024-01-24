@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import styles from "./MealCell.module.scss";
 import { Link } from "react-router-dom";
 
-const MealCell = ({ meal }) => {
-  console.log(`POUET`, meal)
+const MealCell = ({ meal, isCommandePage }) => {
+
 	return (
 		<tr>
 			<td>
@@ -12,8 +12,7 @@ const MealCell = ({ meal }) => {
 			</td>
 			<td>{meal.cuisine}</td>
 			<td>
-				{meal.mealType.length > 1
-					? meal.mealType.map((type, index) => {
+				{meal.mealType.length > 1 ? meal.mealType.map((type, index) => {
 							if (index > 0) {
 								return " / " + type;
 							} else {
@@ -22,9 +21,13 @@ const MealCell = ({ meal }) => {
 					  })
 					: meal.mealType}
 			</td>
-			<td>
-				<button></button>
-			</td>
+			{isCommandePage && (
+				<td>
+					<button onClick={() => isCommandePage(meal)}>
+						Supprimer
+					</button>
+				</td>
+			)}
 		</tr>
 	);
 };

@@ -1,6 +1,38 @@
 .Footer {
-	height: 80px;
 	display: flex;
-	justify-content: center;
-	background-color: blue;
+	justify-content: space-around;
+	background-color: rgba(40, 45, 43, 0.8196078431);
+	padding: 30px;
+	position: relative;
+
+	::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		height: 50%;
+		width: 1px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	button {
+		color: white;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.FooterRight {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
 }

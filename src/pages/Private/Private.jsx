@@ -9,7 +9,7 @@ export default function Private() {
 		return <Navigate to="/accueil"/>;
 	}
 	return (
-		<div className="container">
+		<div>
 			<Outlet />
 		</div>
 	);

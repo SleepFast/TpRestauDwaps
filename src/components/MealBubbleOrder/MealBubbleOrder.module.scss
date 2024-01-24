@@ -1,0 +1,38 @@
+.MealBubbleOrder {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  
+  &.MealBubbleOrderOpen {
+    transform: rotate(360deg);
+    opacity: 1;
+    z-index: 1;
+
+    &:hover {
+      transform: scale(0.90);
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-35%, -94%);
+    z-index: 1;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+
+  ion-icon {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    background-color: #141212;
+    border-radius: 50px;
+    color: white;
+  }
+}

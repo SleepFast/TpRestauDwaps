@@ -4,26 +4,38 @@
 
 .MealsListCTA {
   display: flex;
-  width: 100%;
+  width: 50%;
   justify-content: space-around;
   align-items: center;
+  margin: 20px auto;
 
   button {
-    border: 1px solid purple;
-    color: purple;
-    border-radius: 20px;
-    padding: 15px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+
 
     &:hover {
-      color: white;
-      background-color: purple;
-      border-color: purple;
+      color: #F7CA00;
     }
 
     &.Selected {
-      color: white;
-      background-color: purple;
-      border-color: purple;
+      color: #F7CA00;
     }
   }
+}
+
+.MealsListTable {
+  text-align: start;
+}
+
+.MealsListTable th {
+  background: #ededed91;
+  padding: 10px 5px;
+  text-align: start;
+}
+
+.MealsListTable td {
+  padding: 8px 5px;
 }

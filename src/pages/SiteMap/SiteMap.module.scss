@@ -1,0 +1,12 @@
+.SiteMap {
+  strong {
+    font-size: 26px;
+  }
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+}

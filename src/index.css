@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -31,8 +34,24 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
+  font-family: lexend;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  font-family: lexend;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0.8em;
+}
+
+h3 {
+  font-family: lexend;
+  font-weight: bold;
+  color: #F7CA00;
 }
 
 button {
@@ -82,9 +101,6 @@ html {
   box-sizing: inherit;
 }
 
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
