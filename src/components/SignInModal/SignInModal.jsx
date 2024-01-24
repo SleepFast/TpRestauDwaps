@@ -32,7 +32,6 @@ export default function SignInModal() {
 			inputs.current = [];
 			navigate("/private/liste-des-plats");
 		} catch {
-			// inputs.current = [];
 			setValidation("Wopsy, email and/or password incorrect");
 		}
 	};
