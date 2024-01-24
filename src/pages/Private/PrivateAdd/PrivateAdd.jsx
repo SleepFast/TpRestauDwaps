@@ -350,7 +350,7 @@ const PrivateAdd = () => {
 					</div>
 				</button>
 			</form>
-			<img src="../../../public/food.png" />
+			<img src="/food.png" />
 		</div>
 	);
 };

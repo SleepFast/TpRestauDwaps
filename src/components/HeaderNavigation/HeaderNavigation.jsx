@@ -12,7 +12,7 @@ const HeaderNavigation = () => {
 		<header className={styles.HeaderNavigation}>
 			<div>
 				<Link to="/accueil">
-					<img src="../../../public/logo.png" />
+					<img src="/logo.png" />
 				</Link>
 			</div>
 			<nav className={styles.HeaderNavigation_links}>
