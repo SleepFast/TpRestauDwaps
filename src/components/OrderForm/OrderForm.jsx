@@ -28,7 +28,7 @@ const OrderForm = () => {
 					informations ci-dessous
 				</h3>
 				<div className={styles.OrderFormCard}>
-					<img src="../../../public/delivery.png" />
+					<img src="/delivery.png" />
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<div>
 							<label htmlFor="firstName">Prénom</label>
