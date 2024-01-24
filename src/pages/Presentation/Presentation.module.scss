@@ -1,1 +1,21 @@
-.Presentation {}
+.Presentation {
+	.PresentationMeal {
+		display: flex;
+		justify-content: center;
+		height: 500px;
+		gap: 80px;
+		margin: 50px;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 30px;
+			padding-bottom: 50px;
+		}
+
+    img {
+      border-radius: 20px;
+    }
+	}
+}
